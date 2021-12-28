@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: 0.1s;
+}
+
+.clear {
+    clear: both;
 }
 
 #header {
@@ -25,6 +30,7 @@
 }
 
 .nav {
+    clear: both;
     margin-top: 5px;
     clear: both;
     width: 100%;
@@ -35,8 +41,9 @@
 .content {
     width: 100%;
     height: 700px;
-    background-color: royalblue;
+    /* background-color: royalblue; */
     margin-top: 5px;
+    margin-right: 10px;
 }
 
 /* left */
@@ -67,17 +74,18 @@
 
 /* mid */
 
+
 .middle{
     width: 60%;
     height: 700px;
-    background-color: rgb(255, 229, 80);
+    /* background-color: rgb(255, 229, 80); */
     float: left;
 }
 
 .topmid {
     width: 100%;
     height: 200px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .midcon {
@@ -99,13 +107,25 @@
     width: 100%;
 }
 
-.botcon {
+.botconduoi {
+    background-color: crimson;
+}
+
+.botcon1, .botcon2 {
     height: 50%;
-    width: calc(100%/3);
+    width: 100%;
     background-color: cyan;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     float: left;
 }
+
+.botcontren, .botconduoi {
+    /* border: solid 0.5px black; */
+    width: calc(100%/3);
+    height: 100%;
+    float: left;
+}
+
 
 /* right */
 
@@ -155,5 +175,48 @@ a {
     border-right: black solid 1px;
 }
 
+@media only screen and (max-width: 1000px) {
+    .left {
+        display: none;
+    }
 
+    .middle {
+        width: 70%;
+    }
 
+    .right {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 777px) {
+    .right {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .middle {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .botcontren {
+        width: 98%;
+        margin-bottom: 10px;
+    }
+
+    .botconduoi {
+        width: 48%;
+        height: 200px;
+    }
+
+    .botconduoi:last-child {
+        display: none;
+    }
+    }
